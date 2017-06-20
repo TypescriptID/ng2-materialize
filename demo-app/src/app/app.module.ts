@@ -17,6 +17,7 @@ import { CheckboxModule } from './checkbox/checkbox.module';
 import { CollapsibleModule } from './collapsible/collapsible.module';
 import { CollectionModule } from './collection/collection.module';
 import { DropdownModule } from './dropdown/dropdown.module';
+import { FormValidationModule } from './form-validation/form-validation.module';
 import { HomeModule } from './home/home.module';
 import { IconModule } from './icon/icon.module';
 import { InputModule } from './input/input.module';
@@ -54,6 +55,7 @@ import { TooltipModule } from './tooltip/tooltip.module';
     CollapsibleModule,
     CollectionModule,
     DropdownModule,
+    FormValidationModule,
     HomeModule,
     IconModule,
     InputModule,
