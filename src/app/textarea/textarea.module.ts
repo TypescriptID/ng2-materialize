@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { MzTextareaContainerComponent } from './textarea-container';
@@ -17,4 +16,4 @@ import { MzTextareaDirective } from './textarea.directive';
     MzTextareaPrefixDirective,
   ],
 })
-export class MzTextAreaModule { }
+export class MzTextareaModule { }
