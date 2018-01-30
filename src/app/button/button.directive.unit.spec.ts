@@ -113,6 +113,7 @@ describe('MzButtonDirective:unit', () => {
         directive.flat = true;
         directive.handleFlat();
 
+        expect(renderer.setElementClass).toHaveBeenCalledWith(mockElementRef.nativeElement, 'btn', !directive.flat);
         expect(renderer.setElementClass).toHaveBeenCalledWith(mockElementRef.nativeElement, 'btn-flat', directive.flat);
       });
 
@@ -184,6 +185,19 @@ describe('MzButtonDirective:unit', () => {
         expect(rendererSpy.calls.allArgs()).toEqual([
           [mockElementRef.nativeElement, 'waves-effect', !directive.noWaves],
           [mockElementRef.nativeElement, 'waves-light', !directive.noWaves],
+        ]);
+      });
+
+      it('should add only waves-effect on button element when flat is true', () => {
+
+        const rendererSpy = spyOn(renderer, 'setElementClass');
+
+        directive.flat = true;
+        directive.handleNoWaves();
+
+        expect(rendererSpy.calls.count()).toBe(1);
+        expect(rendererSpy.calls.allArgs()).toEqual([
+          [mockElementRef.nativeElement, 'waves-effect', !directive.noWaves],
         ]);
       });
 
